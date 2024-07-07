@@ -1,6 +1,6 @@
 # DNS Enumeration With Python
 Our goal is to perform zone transfer.
-## Usage
+# Usage
 `chmod +x DNS-AXFR.py`
 
 `DNS-AXFR.py [options] -d <DOMAIN>`
@@ -15,6 +15,17 @@ Our goal is to perform zone transfer.
 `-v`               Prints the version of DNS-AXFR.py
   
 **Example:** `./dns-axfr.py -d inlanefreight.com -n ns1.inlanefreight.com,ns2.inlanefreight.com`
+```
+[*] Successful Zone Transfer from ns1.inlanefreight.com
+[*] Successful Zone Transfer from ns2.inlanefreight.com
+-------- Found Subdomains:
+adm.inlanefreight.com
+blog.inlanefreight.com
+wlan.inlanefreight.com
+afdc0102.inlanefreight.com
+autodiscover.inlanefreight.com
+kfdcex07.inlanefreight.com
+```
 ## [dnspython](https://dnspython.readthedocs.io/en/latest/)
 Dnspython is a DNS toolkit for Python. 
 
