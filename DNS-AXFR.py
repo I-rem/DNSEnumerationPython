@@ -28,10 +28,15 @@ def AXFR(domain, nameserver):
         try:
 				# Perform the zone transfer
                 axfr = dz.from_xfr(dq.xfr(nameserver, domain))
-				
+
                 # If zone transfer was successful
-                # Add found subdomains to global 'Subdomain' list
-				
+                if axfr:
+                        print('[*] Successful Zone Transfer from {}'.format(nameserver))
+
+                        # Add found subdomains to global 'Subdomain' list
+                        for record in axfr:
+                                Subdomains.append('{}.{}'.format(record.to_text(), domain))
+
         # If zone transfer fails
         except Exception as error:
                 print(error)
