@@ -20,3 +20,20 @@ NS.nameservers = ['ns1.inlanefreight.com', 'ns2.inlanefreight.com']
 
 # List of found subdomains
 Subdomains = []
+
+# Define the AXFR Function
+def AXFR(domain, nameserver):
+
+        # Try zone transfer for given domain and namerserver
+		# Perform the zone transfer
+        # If zone transfer was successful
+        # Add found subdomains to global 'Subdomain' list
+        # If zone transfer fails
+
+# Main
+if __name__=="__main__":
+
+        # For each nameserver
+        # Try AXFR
+        # Print the results
+        # Print each subdomain
